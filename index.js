@@ -72,7 +72,7 @@ module.exports = function(content) {
     content = attributesContext.replaceMatches(content);
 
     // Compile template
-    var source = Handlebars.precompile(content);
+    var source = Handlebars.precompile(content, { preventIndent: true });
 
     // Resolve macros
     if (parseMacros) {
